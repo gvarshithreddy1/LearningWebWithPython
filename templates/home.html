@@ -15,7 +15,8 @@
     
   </head>
   <body>
-    <div class="container" >
+    {% include 'header.html' %}
+    <div class="container">
       <h1 class="text-center mt-4 mb-4">Zondy's First website</h1>
       <img class="img-fluid" id="banner" src="https://learningwebwithpython.zondythe.repl.co/static/banana.jpeg">
       <h2 class="text-center mt-4 mb-4" >About Zondy</h2>
@@ -24,16 +25,18 @@
       <h2 class="text-center mt-4 mb-4">Unfortunately My Friends(Only Some)</h2>
       <div style = "margin-bottom: 8px; ">
         {%for friend in friends%}
-          {% include 'friendlist.html'%}
-         
+          {% include 'friendlist.html'%}         
         {%endfor%}
       </div>
     
     </div>
     <div class="text-center">
-      <button type="button" class="btn btn-primary btn-lg" style="margin-top: 10px">Contact us</button>
+      <a href="mailto:zondyinc@gmail.com?subject=Bro%20wassup%20I%20just%20visited%20you%20website.&body=Name%3A%20%3CEnter%20your%20name%3E%0D%0A%0D%0AExperience%3A%0D%0A%3CHow%20was%20your%20experience%3F%3E" type="button" class=" btn btn-primary btn-lg" style="margin-top: 50px">Contact Me</a>
+      {% include 'footer.html' %}
     </div>
-    <p class="text-center mt-4 mb-4">© Copyright 2023, Zondy Inc.</p>
+    
+    
+    
     
   </body>
 </html>
