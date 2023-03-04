@@ -1,47 +1,39 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Zondy's Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <style>
-      h1{
-        text-align:center;
-        font-family: Roboto;
-        font-size:40;
-        color : #383C4A
-      }
-      h2{
-        text-align:center;
-        font-family: Roboto;
-        font-size:32;
-        color : #383C4A;
-      }
-      #banner {
+      #banner{
         width: 100%;
         height: 500px;
-        object-fit : cover;
-        
-      }
-      #container{
-        max-width: 720px;
-        margin: 0 auto;
+        object-fit: cover;
       }
     </style>
+    
   </head>
   <body>
-    <div id="container">
-      <h1>Zondy's First website</h1>
-      <img id="banner" src="https://learningwebwithpython.zondythe.repl.co/static/banana.jpeg">
-      <h2>About Zondy</h2>
-      <p>Welcome to my website, where you'll find absolutely nothing of value! That's right, this website is all about nothing. Nada. Zilch. Zero. But hey, sometimes nothing can be a welcome break from the constant noise and information overload of the internet, right? So sit back, relax, and enjoy the emptiness. Who knows, you might even find some inner peace in the nothingness. Or, you know, you might just get really bored. Either way, thanks for stopping by!.</p>
+    <div class="container" >
+      <h1 class="text-center mt-4 mb-4">Zondy's First website</h1>
+      <img class="img-fluid" id="banner" src="https://learningwebwithpython.zondythe.repl.co/static/banana.jpeg">
+      <h2 class="text-center mt-4 mb-4" >About Zondy</h2>
+      <p class="lead">Welcome to my website, where you'll find absolutely nothing of value! That's right, this website is all about nothing. Nada. Zilch. Zero. But hey, sometimes nothing can be a welcome break from the constant noise and information overload of the internet, right? So sit back, relax, and enjoy the emptiness. Who knows, you might even find some inner peace in the nothingness. Or, you know, you might just get really bored. Either way, thanks for stopping by!.</p>
   
-      <h2>Maybe Job Positions</h2>
-      <p>TODO - add some jobs here</p>
-      
+      <h2 class="text-center mt-4 mb-4">Unfortunately My Friends</h2>
+      <div style = "margin-bottom: 8px; ">
+        {%for friend in friends%}
+          {% include 'friendlist.html'%}
+         
+        {%endfor%}
       </div>
-    <div style="text-align:center;">
-      <button>Contact us</button>
+    
     </div>
-    <p style="font-family: Roboto;font-weight:bold; text-align: center">Copyright 2023, Zondy Inc.</p>
+    <div class="text-center">
+      <button type="button" class="btn btn-primary btn-lg" style="margin-top: 10px">Contact us</button>
+    </div>
+    <p class="text-center mt-4 mb-4">© Copyright 2023, Zondy Inc.</p>
     
   </body>
 </html>

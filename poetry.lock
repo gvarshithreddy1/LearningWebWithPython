@@ -58,6 +58,14 @@ MarkupSafe = ">=2.0"
 i18n = ["Babel (>=2.7)"]
 
 [[package]]
+name = "jsonify"
+version = "0.5"
+description = "A csv to json converter"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "markupsafe"
 version = "2.1.2"
 description = "Safely add untrusted strings to HTML/XML markup."
@@ -82,7 +90,7 @@ watchdog = ["watchdog"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "20babc257a59ef5d9f1d8c4495e5c875e63508b9a500784f0be51367ce6e8359"
+content-hash = "e2223b05dc6ab92d20dada78036b8a38bea5d885bfefb291753c728def090657"
 
 [metadata.files]
 click = []
@@ -90,5 +98,6 @@ colorama = []
 flask = []
 itsdangerous = []
 jinja2 = []
+jsonify = []
 markupsafe = []
 werkzeug = []
